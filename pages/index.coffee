@@ -6,8 +6,8 @@ div '.container', ->
       p 'Charleston, SC'
       p 'An independent, augmentative education program conceived in collaboration with software technology companies in the Charleston Digital Corridor'
       div style: 'text-align: center;', ->
-        a 'btn.btn-primary.btn-large', href: '#', 'Calendar'
-        a 'btn.btn-primary.btn-large', href: '#', 'Find Class'
+        a 'btn.btn-primary.btn-large', href: '/calendar.html', 'Calendar'
+        a 'btn.btn-primary.btn-large', href: '/classes.html', 'Find Class'
   hr '.soften', ''
   div '.marketing', ->
     h1 'Featured Courses'
