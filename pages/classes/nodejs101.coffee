@@ -1,46 +1,32 @@
 course = {
-  startdate: 'Sept 17, 2012'
-  name: 'NodeJs 101'
-  title: 'NodeJs: Getting Started with NodeJs'
-  section: 'Part 101'
+  startdate: 'Sept 19, 2012'
+  times: '3pm - 5:30pm'
+  name: 'NodeJs'
+  title: 'Getting Started with NodeJs'
+  section: '101'
   imgSponsor: 'http://placehold.it/200x100&text=Sponsor'
-  instructor: 'Tom Wilson, Chief Technologist of Jack Russell Software'
+  instructor: 'Tom Wilson'
+  instructorTitle: 'Chief Technologist'
+  instructorCompany: 'Jack Russell Software'
   instructorPhoto: 'http://placehold.it/200&text=Photo'
   instructorBio: '''
-  Tom Wilson started hacking on computers at the early age of 9 years 
-  old during the days of the Apple II and Commodore 64.  Tom has worked as 
-  a Software Developer since the early 90's.  When the buzz was all about 
-  wysiwyg and client/server software. 
+  Tom Wilson started hacking on computers at the early age of 9 years old during the days of the Apple II and Commodore 64.  Tom has worked as a Software Developer since the early 90's.  When the buzz was all about wysiwyg and client/server software. 
 
-  Focused on Healthcare Application Development for most of his career, Tom 
-  has been building large scale and complex healthcare web applications for 
-  over a decade. Tom Wilson believes that web application development is one 
-  of the most complicated professions on the planet.
+  Focused on Healthcare Application Development for most of his career, Tom has been building large scale and complex healthcare web applications for over a decade. Tom Wilson believes that web application development is one of the most complicated professions on the planet.
 
-  Tom loves to teach as much as he loves to learn. Everywhere he has worked, 
-  he has always focused on improving the developer's skills as much as 
-  delivering quality software.  Tom has given many talks and workshops, and 
-  is an active member in the Charleston Software Development Community.  He 
-  leads the Charleston Ruby Group and is the founder of the Charleston 
-  Javascript Group.
+  Tom loves to teach as much as he loves to learn. Everywhere he has worked, he has always focused on improving the developer's skills as much as delivering quality software.  Tom has given many talks and workshops, and is an active member in the Charleston Software Development Community.  He leads the Charleston Ruby Group and is the founder of the Charleston Javascript Group.
 
-  Toms' knowledge, experience and passion provide a wealth of value for anyone 
-  interested in the craft of software development.
+  Toms' knowledge, experience and passion provide a wealth of value for anyone interested in the craft of software development.
   '''
   intro: 'In this class, you will learn what NodeJs is, and how to use its strengths.'
   description: '''
-  NodeJs is the technology of 2012 and it is everywhere, from Microsoft to Startups.  
-  This is the hottest technology framework for the web since RubyonRails.  Take this class
-    and find out why.  In just four weeks, you will learn what nodejs is, and how to use node
-    to build File Servers, Chat Servers, and a Micro Blog site.  These application are simple,
-    but will give you a full overview of NodeJs and what you can do with this powerful new
-    technology.
+  NodeJs is the technology of 2012 and it is everywhere, from Microsoft to Startups.  This is the hottest technology framework for the web since RubyonRails.  Take this class and find out why.  In just four weeks, you will learn what nodejs is, and how to use node to build File Servers, Chat Servers, and a Micro Blog site.  These application are simple, but will give you a full overview of NodeJs and what you can do with this powerful new technology.
   '''
   sessions: [
-    'Session 1: What is NodeJs?'
-    'Session 2: Node Package Manaager'
-    'Session 3: Socket.IO and Events'
-    'Session 4: Full Stack NodeJs - ExpressJs'
+    'What is NodeJs?'
+    'Node Package Manaager'
+    'Socket.IO and Events'
+    'Full Stack NodeJs - FlatIronJS'
   ],
   skillsets: [
     'Programming'
@@ -48,12 +34,9 @@ course = {
     'Javascript'
   ],
   resourceDescription: '''
-  To get the most out of this course, you should have general programming knowledge,
-  have experience working with web development technologies, like php, django, rails.
+  To get the most out of this course, you should have general programming knowledge, have experience working with web development technologies, like php, django, rails.
 
-  Experience with Javascript.  This is an introductory course into nodejs, so we will 
-  not cover deep nodejs topics, we will touch on some core principals and learn how
-  to use the framework.  If your interested in more advanced topics look at NodeJs Part 2.
+  Experience with Javascript.  This is an introductory course into nodejs, so we will not cover deep nodejs topics, we will touch on some core principals and learn how to use the framework.  If your interested in more advanced topics look at NodeJs Part 2.
   ''',
   faqs: [{
       question: 'Will I get a statement of accomplishment after completing this class?'
@@ -77,6 +60,17 @@ course = {
   }]
 } 
 
+text '''
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+'''
+
 div '.container', ->
   header style: 'margin-bottom: 20px;', ->
     div '.subnav.subnav-fixed', ->
@@ -89,66 +83,108 @@ div '.container', ->
 
 div '.container', ->
   div '.row', ->
+    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      h1 course.title + ' - ' + course.section
+      p course.intro
+    
     div '.span5', ->
-      img src: course.imgSponsor
-      div '.well', style: 'margin: 20px 0 20px 0;', ->
-        h1 -> course.title
-        h2 -> course.section
-      h3 -> course.instructor
-      p -> course.intro
+      div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
+      table '.table.table-bordered', ->
+        tr ->
+          th 'Instructor'
+          td course.instructor
+        tr ->
+          th 'Title'
+          td course.instructorTitle
+        tr ->
+          th 'Company'
+          td course.instructorCompany
     div '.span5.offset1', ->
-      img src: 'http://placehold.it/400x300&text=Video'
-      div style: 'margin-top: 30px;', ->
+      img src: course.imgSponsor
+      div ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'
 
   hr()
   div '.row', ->
-    div '.span7', ->
+    div '.span4', ->
       p ->
-        b 'Starts On:'
+        b 'Starts On: '
         text course.startDate + ' (4 weeks long)'
       p ->
-        b 'Workload:'
-        text ' 2.5 hours/week'
-      p -> a href: '#', 'Emerging Technologies'
-      p -> a href: '#', 'Backend Web Programming'
-    div '.span3', ->
-      button '.btn', 'Tweet'
-      button '.btn', '+1'
-      button '.btn', 'Like'
+        b 'Times: '
+        text course.times
+      p ->
+        b 'Workload: '
+        text '2.5 hours/week'
+    div '.span7', ->
+      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-via="chscodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      '''
+      div '.span2', -> text '''
+      <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
+      '''
   hr()
   div '.row', ->
-    h2 'About the Course'
-    div '.span4', ->
-      h3 'Course Outline'
-      ul ->
-        for session in course.sessions
-          li session
-    div '.span5', ->
-      p course.description
-  div '.row', ->
-    h2 'About the Instructor'
-    div '.span3', ->
-      img src: course.instructorPhoto, style: 'margin: 10px;'
-    div '.span6', course.instructorBio
-      
-  div '.row', ->
-    h2 'Required Resources'
-    div '.span3', ->
-      h3 'Skillsets'
-      ul ->
-        for skill in course.skillsets
-          li skill
-    div '.span6', course.resourceDescription
-  div '.row', ->
-    h2 'Frequently Asked Questions'
-    div '.span3', ->
-      img src: 'http://placehold.it/200&text=faq_pic', style: 'margin: 20px;'
+    div '#about.span5', ->
+      h2 style: 'margin-bottom: 40px;', 'About the Course'
+      markdown course.description
     div '.span6', ->
+      h3 'Course Outline'
+      table '.table.table-bordered', style: 'margin-top: 50px;',  ->
+        tr -> 
+          th 'Sessons' 
+        for session in course.sessions
+          tr -> 
+            td session
+  hr()
+  div '.row', ->
+    h2 '#instructor', style: 'margin-bottom: 40px;', 'About the Instructor'
+    div '.span4', ->
+      div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
+      table '.table.table-bordered', ->
+        tr ->
+          th 'Instructor'
+          td course.instructor
+        tr ->
+          th 'Title'
+          td course.instructorTitle
+        tr ->
+          th 'Company'
+          td course.instructorCompany
+
+    div '.span6', -> markdown course.instructorBio
+  hr '#resources', ''
+  div '.row', ->
+    div '.span6', -> 
+      h2 style: 'margin-bottom: 40px;', 'Required Resources'
+      markdown course.resourceDescription
+
+    div '.span6', ->
+      h3 style: 'margin-bottom: 50px', 'Skillsets'
+      table '.table.table-bordered', ->
+        for skill in course.skillsets
+          tr -> 
+            td skill
+  hr()
+  div '.row', ->
+    div '#faq', -> h2 'Frequently Asked Questions'
+    div '.span6.offset2', style: 'margin-top: 50px;', ->
       ul ->
         for faq in course.faqs
           li ->
             h3 faq.question
+            br()
             p faq.answer
+            br()

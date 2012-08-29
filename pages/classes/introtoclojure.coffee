@@ -1,10 +1,13 @@
 course = {
-  startdate: 'Sept 17, 2012'
+  startDate: 'Sept 20, 2012'
+  times: '3pm - 5:30pm'
   name: 'Clojure 101'
-  title: 'Clojure 101: Introduction to the Language'
+  title: 'Introduction to Clojure'
   section: '101'
   imgSponsor: 'http://placehold.it/200x100&text=Sponsor'
-  instructor: 'Mark Gunnels, Freelance Programmer'
+  instructor: 'Mark Gunnels'
+  instructorTitle: 'Freelance Programmer'
+  instructorCompany: 'Self-Employed'
   instructorPhoto: 'http://placehold.it/200&text=Photo'
   instructorBio: '''
   Mark Gunnels is a freelance programmer with over 17 years of experience in Java, C# (shh, don't tell anyone), PHP, and Ruby.  After fetishizing complexity for many years as a JEE developer, he now enjoys writing applications composed of simple parts with sharp boundaries.  He enjoys sharing what he knows and learning from others.
@@ -20,10 +23,10 @@ Clojure is a dynamic programming language that is primarily run on the Java Virt
 * Macros that allow you to write programs that write programs 
   '''
   sessions: [
-    'Session 1: Introduction to the Clojure ecosystem and syntax'
-    'Session 2: Data Structures and Concurrent Programming'
-    'Session 3: Multimethods, Protocols, Records and Types'
-    'Session 4: Java Interoperability and Macros'
+    'Introduction to the Clojure ecosystem and syntax'
+    'Data Structures and Concurrent Programming'
+    'Multimethods, Protocols, Records and Types'
+    'Java Interoperability and Macros'
   ],
   skillsets: [
     'Basic Programming'
@@ -53,6 +56,17 @@ Clojure is a dynamic programming language that is primarily run on the Java Virt
   }]
 }
 
+text '''
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+'''
+
 div '.container', ->
   header style: 'margin-bottom: 20px;', ->
     div '.subnav.subnav-fixed', ->
@@ -65,67 +79,108 @@ div '.container', ->
 
 div '.container', ->
   div '.row', ->
+    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      h1 course.title + ' - ' + course.section
+      p course.intro
+    
     div '.span5', ->
-      img src: course.imgSponsor
-      div '.well', style: 'margin: 20px 0 20px 0;', ->
-        h1 -> course.title
-        h2 -> course.section
-      h3 -> course.instructor
-      p -> course.intro
+      div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
+      table '.table.table-bordered', ->
+        tr ->
+          th 'Instructor'
+          td course.instructor
+        tr ->
+          th 'Title'
+          td course.instructorTitle
+        tr ->
+          th 'Company'
+          td course.instructorCompany
     div '.span5.offset1', ->
-      img src: 'http://placehold.it/400x300&text=Video'
-      div style: 'margin-top: 30px;', ->
+      img src: course.imgSponsor
+      div ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'
 
   hr()
   div '.row', ->
-    div '.span7', ->
+    div '.span4', ->
       p ->
-        b 'Starts On:'
+        b 'Starts On: '
         text course.startDate + ' (4 weeks long)'
       p ->
-        b 'Workload:'
-        text ' 2.5 hours/week'
-      p -> a href: '#', 'Emerging Technologies'
-      p -> a href: '#', 'Backend Web Programming'
-    div '.span3', ->
-      button '.btn', 'Tweet'
-      button '.btn', '+1'
-      button '.btn', 'Like'
+        b 'Times: '
+        text course.times
+      p ->
+        b 'Workload: '
+        text '2.5 hours/week'
+    div '.span7', ->
+      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-via="chscodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      '''
+      div '.span2', -> text '''
+      <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
+      '''
   hr()
   div '.row', ->
-    h2 'About the Course'
-    div '.span4', ->
-      h3 'Course Outline'
-      ul ->
-        for session in course.sessions
-          li session
-    div '.span5', ->
+    div '#about.span5', ->
+      h2 style: 'margin-bottom: 40px;', 'About the Course'
       markdown course.description
-  div '.row', ->
-    h2 'About the Instructor'
-    div '.span3', ->
-      img src: course.instructorPhoto, style: 'margin: 10px;'
     div '.span6', ->
-      markdown course.instructorBio
-      
+      h3 'Course Outline'
+      table '.table.table-bordered', style: 'margin-top: 50px;',  ->
+        tr -> 
+          th 'Sessons' 
+        for session in course.sessions
+          tr -> 
+            td session
+  hr()
   div '.row', ->
-    h2 'Required Resources'
-    div '.span3', ->
-      h3 'Skillsets'
-      ul ->
+    h2 '#instructor', style: 'margin-bottom: 40px;', 'About the Instructor'
+    div '.span4', ->
+      div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
+      table '.table.table-bordered', ->
+        tr ->
+          th 'Instructor'
+          td course.instructor
+        tr ->
+          th 'Title'
+          td course.instructorTitle
+        tr ->
+          th 'Company'
+          td course.instructorCompany
+
+    div '.span6', -> markdown course.instructorBio
+  hr '#resources', ''
+  div '.row', ->
+    div '.span6', -> 
+      h2 style: 'margin-bottom: 40px;', 'Required Resources'
+      markdown course.resourceDescription
+
+    div '.span6', ->
+      h3 style: 'margin-bottom: 50px', 'Skillsets'
+      table '.table.table-bordered', ->
         for skill in course.skillsets
-          li skill
-    div '.span6', -> markdown course.resourceDescription
+          tr -> 
+            td skill
+  hr()
   div '.row', ->
-    h2 'Frequently Asked Questions'
-    div '.span3', ->
-      img src: 'http://placehold.it/200&text=faq_pic', style: 'margin: 20px;'
-    div '.span6', ->
+    div '#faq', -> h2 'Frequently Asked Questions'
+    div '.span6.offset2', style: 'margin-top: 50px;', ->
       ul ->
         for faq in course.faqs
           li ->
             h3 faq.question
+            br()
             p faq.answer
+            br()
