@@ -4,13 +4,13 @@ course = {
   name: 'Website-Basics-101'
   title: 'Website Basics: HTML and CSS'
   section: '101'
-  logo: '/images/html5.png'
-  imgSponsor: 'http://placehold.it/200x100&text=Sponsor'
+  logo: '/images/html-css-javascript.png'
+  imgSponsor: '/images/codecamp_logo.png'
   instructor: 'Joe Bryan, President/Founder at sineLABS'
   instructorTitle: 'President/Founder'
   instructorCompany: 'sineLABS'
   
-  instructorPhoto: 'http://placehold.it/200&text=Photo'
+  instructorPhoto: '/images/instructor_joe_bryan_small.jpg'
   instructorBio: '''
   Joe Bryan has more than 20 years of experience in business and technology leadership and is currently the President and Founder of sineLABS, an e-commerce software development firm specializing in e-commerce site and application development primarily on the <a href="http://www.shopify.com">Shopify</a> platform. sineLABS is the author of three “apps” on the Shopify app store created using Python’s powerful and popular web framework, Django.
 
@@ -23,10 +23,10 @@ course = {
   Web pages and sites at their most basic level are constructed of HTML (HyperText Markup Language) and CSS (Cascading Style Sheets). If a web page is a skyscraper, HTML is the structural ironwork, and concrete base while CSS is the external skin that wraps and encloses the structure. Start here in this class if you are a clean slate with web development!
   '''
   sessions: [
-    'Session 1: Some web history, HTML syntax, most common HTML tags'
-    'Session 2: HTML in depth: more tags, attributes, inline v. block elements'
-    'Session 3: CSS introduction: basic selectors & styles'
-    'Session 4: CSS advanced selectors, CSS layout, CSS3'
+    'Some web history, HTML syntax, most common HTML tags'
+    'HTML in depth: more tags, attributes, inline v. block elements'
+    'CSS introduction: basic selectors & styles'
+    'CSS advanced selectors, CSS layout, CSS3'
   ],
   skillsets: [
     'Basic usage of Mac OS X operating system'

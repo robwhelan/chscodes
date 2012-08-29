@@ -67,7 +67,7 @@ div '.container', ->
           div '.span2', ->
             img src: '/images/php-logo.jpeg'
           div '.span5', ->
-            h3 -> a href: '/classes/php-101.html', 'PHP'
+            h3 -> a href: '/classes/php-101.html', 'Getting started with PHP'
             button '.btn.btn-primary.pull-right', style: 'margin-top: 60px;', 'View Class'
 
           div '.span3', ->
@@ -79,7 +79,7 @@ div '.container', ->
           div '.span2', ->
             img src: 'http://nodejs.jpg.to'
           div '.span5', ->
-            h3 -> a href: '/classes/nodejs-101.html', 'NodeJS'
+            h3 -> a href: '/classes/nodejs-101.html', 'Intro to NodeJS'
             button '.btn.btn-primary.pull-right', style: 'margin-top: 60px;', 'View Class'
 
           div '.span3', ->
