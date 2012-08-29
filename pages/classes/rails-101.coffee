@@ -1,8 +1,8 @@
 course = {
   startDate: 'Sept 20, 2012'
   times: '6pm - 8:30pm'
-  name: 'Rials-101'
-  title: 'Ruby on Rails: An Intro to Rails'
+  name: 'Rails-101'
+  title: 'Intro to Ruby on Rails'
   section: '101'
   logo: '/images/rails_logo.png'
   imgSponsor: '/images/codecamp_logo.png'
@@ -87,7 +87,7 @@ div '.container', ->
 div '.container', ->
   div '#top.row', ->
     div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
-      div '.well.span2', style: 'background: #fff;padding: 10px;margin-right:20px;', ->
+      div '.span1', style: 'padding: 10px;margin-right:20px;', ->
         img src: course.logo, alt: 'AWS EC2'
       h1 course.title + ' - ' + course.section
       p course.intro
