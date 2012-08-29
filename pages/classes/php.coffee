@@ -1,38 +1,26 @@
 course = {
-  startdate: 'Sept 17, 2012'
+  startDate: 'Sept 17, 2012'
+  times: '6pm - 8:30pm'
   name: 'PHP 101'
-  title: 'Starting off with PHP Hypertext Processor'
+  title: 'PHP Hypertext Processor'
   section: '101'
   imgSponsor: 'http://www.blueacorn.com/wp-content/themes/blueacorn/images/logo.png'
-  instructor: 'Brys Sepulveda, Systems Architect at Blue Acorn'
+  instructor: 'Brys Sepulveda'
+  instructorTitle: 'Systems Architect'
+  instructorCompany: 'Blue Acorn'
   instructorPhoto: 'http://www.blueacorn.com/wp-content/themes/blueacorn/images/staff/brys_sepulveda.jpg'
   instructorBio: '''
-  Brys Sepulveda came out of the womb with a laptop in hand. Arguably from the last generation 
-  that existed in a time before the Internet, Brys started his fascination with computers as a 
-  toddler playing with his older brother's gaming consoles. The magic and wonder instilled in 
-  him from those devices still drives him today to pursue the amazing world of computers. With 
-  a passion for software engineering unparalleled in the industry, Brys has always striven to 
-  write elegant, efficient, and maintainable code. He strongly holds the belief that programming 
-  is an artisan craft much like clock making or carpentry. It's an art form that takes nothing 
-  but yourself and logic and creates something functional and beautiful. Having graduated from 
-  CofC with a BS in Computer Science in 2011, Brys is fresh off the boat in the work force. But, 
-  in just one year at Blue Acorn hes gone from being an Intern to a Systems Architect and heading 
-  a team of 6 as a technical lead. Brys teaches everyday as he lives and breathes PHP. As a technical 
-  lead, he is often in demand for solving problems and providing solutions. He has taught numerous 
-  internal classes at Blue Acorn both in the basics of PHP and advanced Object Oriented Design concepts.
+  Brys Sepulveda came out of the womb with a laptop in hand. Arguably from the last generation that existed in a time before the Internet, Brys started his fascination with computers as a toddler playing with his older brother's gaming consoles. The magic and wonder instilled in him from those devices still drives him today to pursue the amazing world of computers. With a passion for software engineering unparalleled in the industry, Brys has always striven to write elegant, efficient, and maintainable code. He strongly holds the belief that programming is an artisan craft much like clock making or carpentry. It's an art form that takes nothing but yourself and logic and creates something functional and beautiful. Having graduated from CofC with a BS in Computer Science in 2011, Brys is fresh off the boat in the work force. But, in just one year at Blue Acorn hes gone from being an Intern to a Systems Architect and heading a team of 6 as a technical lead. Brys teaches everyday as he lives and breathes PHP. As a technical lead, he is often in demand for solving problems and providing solutions. He has taught numerous internal classes at Blue Acorn both in the basics of PHP and advanced Object Oriented Design concepts.
   '''
   intro: 'In this class, students will start the journey to learning the language that drives the internet!'
   description: '''
-  PHP runs more than 75% of all websites on the internet placing it far in front of the pack. 
-  Designed to be easy, portable, flexible, and maintainable, PHP stands at the cutting edge of web 
-  technologies. From Facebook to Wikipedia to the ever popular WordPress blog, all of these are written 
-  in PHP. Come learn what all the hype is about and what PHP can hold in store for you.
+  PHP runs more than 75% of all websites on the internet placing it far in front of the pack. Designed to be easy, portable, flexible, and maintainable, PHP stands at the cutting edge of web technologies. From Facebook to Wikipedia to the ever popular WordPress blog, all of these are written in PHP. Come learn what all the hype is about and what PHP can hold in store for you.
   '''
   sessions: [
-    'Session 1: Syntax, Semantics, and Separation'
-    'Session 2: Boistful Blogging'
-    'Session 3: Actionable Administration'
-    'Session 4: Integral Integrations'
+    'Syntax, Semantics, and Separation'
+    'Boistful Blogging'
+    'Actionable Administration'
+    'Integral Integrations'
   ],
   skillsets: [
     'Problem Solving Skills'
@@ -41,12 +29,7 @@ course = {
   'HTML'
   ],
   resourceDescription: '''
-  In order to excel in this course, previous exposure to any programming language is highly recommended. 
-  As an introduction to PHP, this course's main focus is to get you acclimated to the gotchas of PHP and 
-  the power that PHP gives you. With such a huge standard library, PHP comes so fully loaded that we could 
-  never cover everything so the topics will be as expansive as possible. Bring a willingness to learn and 
-  a good attitude. Nothing is more required for this course than the want and drive to learn and improve. 
-  More advanced topics will be covered in PHP 102.
+  In order to excel in this course, previous exposure to any programming language is highly recommended. As an introduction to PHP, this course's main focus is to get you acclimated to the gotchas of PHP and the power that PHP gives you. With such a huge standard library, PHP comes so fully loaded that we could never cover everything so the topics will be as expansive as possible. Bring a willingness to learn and a good attitude. Nothing is more required for this course than the want and drive to learn and improve. More advanced topics will be covered in PHP 102.
   ''',
   faqs: [{
       question: 'Will I get a statement of accomplishment after completing this class?'
@@ -69,6 +52,17 @@ course = {
   }]
 }
 
+text '''
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+'''
+
 div '.container', ->
   header style: 'margin-bottom: 20px;', ->
     div '.subnav.subnav-fixed', ->
@@ -81,66 +75,108 @@ div '.container', ->
 
 div '.container', ->
   div '.row', ->
+    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      h1 course.title + ' - ' + course.section
+      p course.intro
+    
     div '.span5', ->
-      img src: course.imgSponsor
-      div '.well', style: 'margin: 20px 0 20px 0;', ->
-        h1 -> course.title
-        h2 -> course.section
-      h3 -> course.instructor
-      p -> course.intro
+      div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
+      table '.table.table-bordered', ->
+        tr ->
+          th 'Instructor'
+          td course.instructor
+        tr ->
+          th 'Title'
+          td course.instructorTitle
+        tr ->
+          th 'Company'
+          td course.instructorCompany
     div '.span5.offset1', ->
-      img src: 'http://placehold.it/400x300&text=Video'
-      div style: 'margin-top: 30px;', ->
+      img src: course.imgSponsor
+      div ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'
 
   hr()
   div '.row', ->
-    div '.span7', ->
+    div '.span4', ->
       p ->
-        b 'Starts On:'
+        b 'Starts On: '
         text course.startDate + ' (4 weeks long)'
       p ->
-        b 'Workload:'
-        text ' 2.5 hours/week'
-      p -> a href: '#', 'Emerging Technologies'
-      p -> a href: '#', 'Backend Web Programming'
-    div '.span3', ->
-      button '.btn', 'Tweet'
-      button '.btn', '+1'
-      button '.btn', 'Like'
+        b 'Times: '
+        text course.times
+      p ->
+        b 'Workload: '
+        text '2.5 hours/week'
+    div '.span7', ->
+      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-via="chscodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      '''
+      div '.span2', -> text '''
+      <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
+      '''
   hr()
   div '.row', ->
-    h2 'About the Course'
-    div '.span4', ->
-      h3 'Course Outline'
-      ul ->
-        for session in course.sessions
-          li session
     div '.span5', ->
-      p course.description
+      h2 style: 'margin-bottom: 40px;', 'About the Course'
+      markdown course.description
+    div '.span6', ->
+      h3 'Course Outline'
+      table '.table.table-bordered', style: 'margin-top: 50px;',  ->
+        for session in course.sessions
+          tr -> 
+            th 'Sesson' 
+            td session
+        
+  hr()
   div '.row', ->
-    h2 'About the Instructor'
-    div '.span3', ->
-      img src: course.instructorPhoto, style: 'margin: 10px;'
-    div '.span6', course.instructorBio
-      
+    h2 style: 'margin-bottom: 40px;', 'About the Instructor'
+    div '.span4', ->
+      div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
+      table '.table.table-bordered', ->
+        tr ->
+          th 'Instructor'
+          td course.instructor
+        tr ->
+          th 'Title'
+          td course.instructorTitle
+        tr ->
+          th 'Company'
+          td course.instructorCompany
+
+    div '.span6', -> markdown course.instructorBio
+  hr()
   div '.row', ->
-    h2 'Required Resources'
-    div '.span3', ->
-      h3 'Skillsets'
-      ul ->
+    div '.span6', -> 
+      h2 style: 'margin-bottom: 40px;', 'Required Resources'
+      markdown course.resourceDescription
+
+    div '.span6', ->
+      h3 style: 'margin-bottom: 50px', 'Skillsets'
+      table '.table.table-bordered', ->
         for skill in course.skillsets
-          li skill
-    div '.span6', course.resourceDescription
+          tr -> 
+            td skill
+  hr()
   div '.row', ->
     h2 'Frequently Asked Questions'
-    div '.span3', ->
-      img src: 'http://placehold.it/200&text=faq_pic', style: 'margin: 20px;'
-    div '.span6', ->
+    div '.span6.offset2', style: 'margin-top: 50px;', ->
       ul ->
         for faq in course.faqs
           li ->
             h3 faq.question
+            br()
             p faq.answer
+            br()
