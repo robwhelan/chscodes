@@ -1,14 +1,15 @@
 course = {
   startDate: 'Sept 17, 2012'
   times: '6pm - 8:30pm'
-  name: 'PHP 101'
+  name: 'PHP-101'
   title: 'PHP Hypertext Processor'
   section: '101'
-  imgSponsor: 'http://www.blueacorn.com/wp-content/themes/blueacorn/images/logo.png'
+  logo: '/images/php-logo.jpeg'
+  imgSponsor: '/images/blueacorn.png'
   instructor: 'Brys Sepulveda'
   instructorTitle: 'Systems Architect'
   instructorCompany: 'Blue Acorn'
-  instructorPhoto: 'http://www.blueacorn.com/wp-content/themes/blueacorn/images/staff/brys_sepulveda.jpg'
+  instructorPhoto: '/images/brys_sepulveda.jpg'
   instructorBio: '''
   Brys Sepulveda came out of the womb with a laptop in hand. Arguably from the last generation that existed in a time before the Internet, Brys started his fascination with computers as a toddler playing with his older brother's gaming consoles. The magic and wonder instilled in him from those devices still drives him today to pursue the amazing world of computers. With a passion for software engineering unparalleled in the industry, Brys has always striven to write elegant, efficient, and maintainable code. He strongly holds the belief that programming is an artisan craft much like clock making or carpentry. It's an art form that takes nothing but yourself and logic and creates something functional and beautiful. Having graduated from CofC with a BS in Computer Science in 2011, Brys is fresh off the boat in the work force. But, in just one year at Blue Acorn hes gone from being an Intern to a Systems Architect and heading a team of 6 as a technical lead. Brys teaches everyday as he lives and breathes PHP. As a technical lead, he is often in demand for solving problems and providing solutions. He has taught numerous internal classes at Blue Acorn both in the basics of PHP and advanced Object Oriented Design concepts.
   '''
@@ -74,8 +75,10 @@ div '.container', ->
         li -> a href: '#faq', 'Frequently Asked Questions'
 
 div '.container', ->
-  div '.row', ->
-    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+  div '#top.row', ->
+    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      div '.well.span2', style: 'background: #fff;padding: 10px;margin-right:20px;', ->
+        img src: course.logo, alt: 'AWS EC2'
       h1 course.title + ' - ' + course.section
       p course.intro
     
@@ -91,9 +94,9 @@ div '.container', ->
         tr ->
           th 'Company'
           td course.instructorCompany
-    div '.span5.offset1', ->
+    div '.span6', style: 'text-align: center', ->
       img src: course.imgSponsor
-      div ->
+      div style: 'margin-top: 20px;', ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'
@@ -111,7 +114,9 @@ div '.container', ->
         b 'Workload: '
         text '2.5 hours/week'
     div '.span7', ->
-      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-via="chscodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> div '.pull-right', -> text """
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/#{course.name}.html" data-text="#{course.name}" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      """
       div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
 
@@ -135,11 +140,11 @@ div '.container', ->
     div '.span6', ->
       h3 'Course Outline'
       table '.table.table-bordered', style: 'margin-top: 50px;',  ->
+        tr -> 
+          th 'Sessons' 
         for session in course.sessions
           tr -> 
-            th 'Sesson' 
             td session
-        
   hr()
   div '.row', ->
     h2 '#instructor', style: 'margin-bottom: 40px;', 'About the Instructor'

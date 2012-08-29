@@ -1,14 +1,15 @@
 course = {
   startdate: 'Sept 19, 2012'
   times: '3pm - 5:30pm'
-  name: 'NodeJs'
+  name: 'NodeJs-101'
   title: 'Getting Started with NodeJs'
   section: '101'
-  imgSponsor: 'http://placehold.it/200x100&text=Sponsor'
+  logo: '/images/nodejs-dark.png'
+  imgSponsor: '/images/codecamp_logo.png'
   instructor: 'Tom Wilson'
   instructorTitle: 'Chief Technologist'
   instructorCompany: 'Jack Russell Software'
-  instructorPhoto: 'http://placehold.it/200&text=Photo'
+  instructorPhoto: '/images/instructor_tom_wilson_small.jpg'
   instructorBio: '''
   Tom Wilson started hacking on computers at the early age of 9 years old during the days of the Apple II and Commodore 64.  Tom has worked as a Software Developer since the early 90's.  When the buzz was all about wysiwyg and client/server software. 
 
@@ -82,8 +83,10 @@ div '.container', ->
         li -> a href: '#faq', 'Frequently Asked Questions'
 
 div '.container', ->
-  div '.row', ->
-    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+  div '#top.row', ->
+    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      div '.well.span2', style: 'background: #fff;padding: 10px;margin-right:20px;', ->
+        img src: course.logo, alt: 'AWS EC2'
       h1 course.title + ' - ' + course.section
       p course.intro
     
@@ -99,9 +102,9 @@ div '.container', ->
         tr ->
           th 'Company'
           td course.instructorCompany
-    div '.span5.offset1', ->
+    div '.span6', style: 'text-align: center', ->
       img src: course.imgSponsor
-      div ->
+      div style: 'margin-top: 20px;', ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'
@@ -119,7 +122,9 @@ div '.container', ->
         b 'Workload: '
         text '2.5 hours/week'
     div '.span7', ->
-      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-via="chscodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> div '.pull-right', -> text """
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/#{course.name}.html" data-text="#{course.name}" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      """
       div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
 

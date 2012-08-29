@@ -1,7 +1,7 @@
 course = {
   startDate: 'Sept 20, 2012'
   times: '6pm - 8:30pm'
-  name: 'jQuery'
+  name: 'jQuery-101'
   title: 'jQuery: All the goodies!'
   section: '101'
   logo: '/images/jquery_logo.png'
@@ -50,6 +50,17 @@ course = {
     }]
 }
 
+text '''
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+'''
+
 div '.container', ->
   header style: 'margin-bottom: 20px;', ->
     div '.subnav.subnav-fixed', ->
@@ -63,8 +74,8 @@ div '.container', ->
 div '.container', ->
   div '#top.row', ->
     div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
-      div '.span1', style: 'padding: 10px;height: 75px;', ->
-        img style: 'max-height: 100%', src: course.logo, alt: 'JQuery'
+      div '.well.span2', style: 'background: #fff;padding: 10px;margin-right:20px;', ->
+        img src: course.logo, alt: 'AWS EC2'
       h1 course.title + ' - ' + course.section
       p course.intro
     
@@ -100,7 +111,9 @@ div '.container', ->
         b 'Workload: '
         text '2.5 hours/week'
     div '.span7', ->
-      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/jquery-101.html" data-text="JQuery All the goodies!" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> div '.pull-right', -> text """
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/#{course.name}.html" data-text="#{course.name}" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      """
       div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
 

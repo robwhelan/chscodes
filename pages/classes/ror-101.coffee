@@ -1,9 +1,10 @@
 course = {
   startDate: 'Sept 20, 2012'
   times: '6pm - 8:30pm'
-  name: 'Ruby on Rails'
+  name: 'Rials-101'
   title: 'Ruby on Rails: An Intro to Rails'
   section: '101'
+  logo: ''
   imgSponsor: 'http://placehold.it/200x100&text=Sponsor'
   instructor: 'Matt Scott'
   instructorTitle: 'Applications Analyst'
@@ -84,8 +85,10 @@ div '.container', ->
         li -> a href: '#faq', 'Frequently Asked Questions'
 
 div '.container', ->
-  div '.row', ->
-    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+  div '#top.row', ->
+    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      div '.well.span2', style: 'background: #fff;padding: 10px;margin-right:20px;', ->
+        img src: course.logo, alt: 'AWS EC2'
       h1 course.title + ' - ' + course.section
       p course.intro
     
@@ -101,9 +104,9 @@ div '.container', ->
         tr ->
           th 'Company'
           td course.instructorCompany
-    div '.span5.offset1', ->
+    div '.span6', style: 'text-align: center', ->
       img src: course.imgSponsor
-      div ->
+      div style: 'margin-top: 20px;', ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'
@@ -121,7 +124,9 @@ div '.container', ->
         b 'Workload: '
         text '2.5 hours/week'
     div '.span7', ->
-      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-via="chscodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> div '.pull-right', -> text """
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/#{course.name}.html" data-text="#{course.name}" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      """
       div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
 
@@ -145,11 +150,11 @@ div '.container', ->
     div '.span6', ->
       h3 'Course Outline'
       table '.table.table-bordered', style: 'margin-top: 50px;',  ->
+        tr -> 
+          th 'Sessons' 
         for session in course.sessions
           tr -> 
-            th 'Sesson' 
             td session
-        
   hr()
   div '.row', ->
     h2 '#instructor', style: 'margin-bottom: 40px;', 'About the Instructor'
