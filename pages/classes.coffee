@@ -31,7 +31,7 @@ div '.container', ->
           div '.span2', ->
             img src: 'http://jquery-logo.jpg.to'
           div '.span5', ->
-            h3 -> a href: '/classes/jquery_tmplate.html', 'JQuery: Front End Web Dev - Part 1'
+            h3 -> a href: '/classes/jquery-logo.html', 'JQuery: Front End Web Dev - Part 1'
             button '.btn.btn-primary.pull-right', style: 'margin-top: 60px;', 'View Class'
 
           div '.span3', ->
