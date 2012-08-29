@@ -151,7 +151,7 @@ div '.container', ->
       h3 'Course Outline'
       table '.table.table-bordered', style: 'margin-top: 50px;',  ->
         tr -> 
-          th 'Sessons' 
+          th 'Sessions' 
         for session in course.sessions
           tr -> 
             td session

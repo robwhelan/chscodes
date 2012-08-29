@@ -11,7 +11,7 @@ course = {
   instructorCompany: 'Jack Russell Software'
   instructorPhoto: '/images/barrett.jpg'
   instructorBio: '''
-  Years before Barrett Little became an avid Rubyist, he spent his time cutting is teeth on FreeBSD. His interest in Unix eventually led him from building servers at home to leasing servers at Rackspace and hosting web applications on a small cluser of Linux servers.
+  Years before Barrett Little became an avid Rubyist, he spent his time cutting is teeth on FreeBSD. His interest in Unix eventually led him from building servers at home to leasing servers at Rackspace and hosting web applications on a small cluster of Linux servers.
 
   Fast forward to 2009, with 8 years of web development experience under his belt, Barrett spun up his first EC2 server instance. At that time his facination with server technologies was reignited and his obsession with Amazon Web Services began.
 
@@ -139,7 +139,7 @@ div '.container', ->
       h3 'Course Outline'
       table '.table.table-bordered', style: 'margin-top: 50px;',  ->
         tr -> 
-          th 'Sessons' 
+          th 'Sessions' 
         for session in course.sessions
           tr -> 
             td session
