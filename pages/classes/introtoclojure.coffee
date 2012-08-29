@@ -4,11 +4,11 @@ course = {
   name: 'Clojure 101'
   title: 'Introduction to Clojure'
   section: '101'
-  imgSponsor: 'http://placehold.it/200x100&text=Sponsor'
+  imgSponsor: '/images/codecamp_logo.png'
   instructor: 'Mark Gunnels'
   instructorTitle: 'Freelance Programmer'
   instructorCompany: 'Self-Employed'
-  instructorPhoto: 'http://placehold.it/200&text=Photo'
+  instructorPhoto: '/images/mark.jpg'
   instructorBio: '''
   Mark Gunnels is a freelance programmer with over 17 years of experience in Java, C# (shh, don't tell anyone), PHP, and Ruby.  After fetishizing complexity for many years as a JEE developer, he now enjoys writing applications composed of simple parts with sharp boundaries.  He enjoys sharing what he knows and learning from others.
   '''
@@ -95,9 +95,9 @@ div '.container', ->
         tr ->
           th 'Company'
           td course.instructorCompany
-    div '.span5.offset1', ->
+    div '.span6', style: 'text-align: center', ->
       img src: course.imgSponsor
-      div ->
+      div style: 'margin-top: 20px;', ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'

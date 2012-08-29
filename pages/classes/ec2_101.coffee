@@ -2,13 +2,14 @@ course = {
   startDate: 'Sept 24, 2012'
   times: '3pm - 5:30pm'
   name: 'Amazon EC2 101'
-  title: 'Elastic Compute Cloud (EC2)'
+  title: 'Elastic Compute Cloud'
   section: '101'
-  imgSponsor: 'http://placehold.it/200x100&text=Sponsor'
+  logo: '/images/aws.png'
+  imgSponsor: '/images/codecamp_logo.png'
   instructor: 'P. Barrett Little'
   instructorTitle: 'Senior Programmer/Analyst'
   instructorCompany: 'Jack Russell Software'
-  instructorPhoto: 'http://farm8.staticflickr.com/7055/6896883287_f6675ba9a0_q_d.jpg'
+  instructorPhoto: '/images/barrett.jpg'
   instructorBio: '''
   Years before Barrett Little became an avid Rubyist, he spent his time cutting is teeth on FreeBSD. His interest in Unix eventually led him from building servers at home to leasing servers at Rackspace and hosting web applications on a small cluser of Linux servers.
 
@@ -72,8 +73,10 @@ div '.container', ->
         li -> a href: '#faq', 'Frequently Asked Questions'
 
 div '.container', ->
-  div '.row', ->
-    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+  div '#top.row', ->
+    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      div '.well.span2', style: 'background: #fff;padding: 10px;margin-right:20px;', ->
+        img src: course.logo, alt: 'AWS EC2'
       h1 course.title + ' - ' + course.section
       p course.intro
     
@@ -89,9 +92,9 @@ div '.container', ->
         tr ->
           th 'Company'
           td course.instructorCompany
-    div '.span5.offset1', ->
+    div '.span6', style: 'text-align: center', ->
       img src: course.imgSponsor
-      div ->
+      div style: 'margin-top: 20px;', ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'
