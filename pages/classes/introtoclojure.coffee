@@ -4,6 +4,7 @@ course = {
   name: 'Clojure 101'
   title: 'Introduction to Clojure'
   section: '101'
+  logo: '/images/clojure-logo10.png'
   imgSponsor: '/images/codecamp_logo.png'
   instructor: 'Mark Gunnels'
   instructorTitle: 'Freelance Programmer'
@@ -78,8 +79,10 @@ div '.container', ->
         li -> a href: '#faq', 'Frequently Asked Questions'
 
 div '.container', ->
-  div '.row', ->
-    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+  div '#top.row', ->
+    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      div '.span1', style: 'padding: 10px;height: 75px;', ->
+        img style: 'max-height: 100%', src: course.logo, alt: 'AWS EC2'
       h1 course.title + ' - ' + course.section
       p course.intro
     
@@ -115,7 +118,7 @@ div '.container', ->
         b 'Workload: '
         text '2.5 hours/week'
     div '.span7', ->
-      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-via="chscodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/ec2-101.html" data-text="Cloud Server Management Course (EC2)" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
       div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
 

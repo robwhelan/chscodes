@@ -53,9 +53,9 @@ div '.container', ->
       li -> 
         div '.row', ->
           div '.span2', ->
-            img src: 'http://aws.jpg.to'
+            img src: '/images/aws.png'
           div '.span5', ->
-            h3 -> a href: '/classes/ec2_101.html', 'CLOUD: EC2'
+            h3 -> a href: '/classes/ec2-101.html', 'CLOUD: EC2'
             button '.btn.btn-primary.pull-right', style: 'margin-top: 60px;', 'View Class'
 
           div '.span3', ->
