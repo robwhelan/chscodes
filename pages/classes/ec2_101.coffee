@@ -1,5 +1,6 @@
 course = {
-  startdate: 'Sept 24, 2012'
+  startDate: 'Sept 24, 2012'
+  times: 
   name: 'Amazon EC2 101'
   title: 'Amazon Elastic Compute Cloud 101'
   section: '101'

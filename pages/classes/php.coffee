@@ -75,7 +75,7 @@ div '.container', ->
 
 div '.container', ->
   div '.row', ->
-    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
       h1 course.title + ' - ' + course.section
       p course.intro
     
@@ -129,7 +129,7 @@ div '.container', ->
       '''
   hr()
   div '.row', ->
-    div '.span5', ->
+    div '#about.span5', ->
       h2 style: 'margin-bottom: 40px;', 'About the Course'
       markdown course.description
     div '.span6', ->
@@ -142,7 +142,7 @@ div '.container', ->
         
   hr()
   div '.row', ->
-    h2 style: 'margin-bottom: 40px;', 'About the Instructor'
+    h2 '#instructor', style: 'margin-bottom: 40px;', 'About the Instructor'
     div '.span4', ->
       div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
       table '.table.table-bordered', ->
@@ -157,7 +157,7 @@ div '.container', ->
           td course.instructorCompany
 
     div '.span6', -> markdown course.instructorBio
-  hr()
+  hr '#resources', ''
   div '.row', ->
     div '.span6', -> 
       h2 style: 'margin-bottom: 40px;', 'Required Resources'
@@ -171,7 +171,7 @@ div '.container', ->
             td skill
   hr()
   div '.row', ->
-    h2 'Frequently Asked Questions'
+    div '#faq', -> h2 'Frequently Asked Questions'
     div '.span6.offset2', style: 'margin-top: 50px;', ->
       ul ->
         for faq in course.faqs
