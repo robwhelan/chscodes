@@ -4,11 +4,12 @@ course = {
   name: 'jQuery'
   title: 'jQuery: All the goodies!'
   section: '101'
-  imgSponsor: 'http://placehold.it/200x100&text=Sponsor'
+  logo: '/images/jquery_logo.png'
+  imgSponsor: '/images/codecamp_logo.png'
   instructor: 'Nick Bucciarelli'
   instructorTitle: 'Programmer/Analyst'
   instructorCompany: 'Jack Russell Software'
-  instructorPhoto: 'http://placehold.it/200&text=Photo'
+  instructorPhoto: '/images/instructor_nick_bucciarelli_small.jpg'
   instructorBio: '''
     Nick Bucciarrelli is a proficient, adaptive computer programmer and open source evangelist. Effective in identifying and solving complex problems, Bucciarelli currently serves as a computer programmer and analyst for Jack Russell Software in Mt. Pleasant. Bucciarelli is an active member of the Charleston Software Development community; he regularly presents at the Charleston Ruby Group and served as a speaker for the 2010 BarCampCHS conference. His programming skills include Ruby on Rails; CoffeScript/JavaScript; HTML/HAML; XML/JSON; MySql; CouchDB/MongoDB; and jQuery, among others.
 
@@ -21,10 +22,10 @@ course = {
     In this course, we will create multiple mini-applications in the browser illustrating the use and power of jQuery in modern web development. While there are numerous other javascript libraries and frameworks available (such as Prototype, MooTools, etc.) that offer similar features, jQuery is by far the most popular and most commonly encountered. Additionally, if you know jQuery well, you can easily and fairly quickly learn to use any other javascript library.
   '''
   sessions: [
-    'Session 1: What is jQuery?'
-    'Session 2: Making things happen'
-    'Session 3: Widgets and Interactions'
-    'Session 4: jQuery Mobile'
+    'What is jQuery?'
+    'Making things happen'
+    'Widgets and Interactions'
+    'jQuery Mobile'
   ],
   skillsets: [
     'Programming'
@@ -49,17 +50,6 @@ course = {
     }]
 }
 
-text '''
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-'''
-
 div '.container', ->
   header style: 'margin-bottom: 20px;', ->
     div '.subnav.subnav-fixed', ->
@@ -71,8 +61,10 @@ div '.container', ->
         li -> a href: '#faq', 'Frequently Asked Questions'
 
 div '.container', ->
-  div '.row', ->
-    div '#top.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+  div '#top.row', ->
+    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
+      div '.span1', style: 'padding: 10px;height: 75px;', ->
+        img style: 'max-height: 100%', src: course.logo, alt: 'JQuery'
       h1 course.title + ' - ' + course.section
       p course.intro
     
@@ -88,9 +80,9 @@ div '.container', ->
         tr ->
           th 'Company'
           td course.instructorCompany
-    div '.span5.offset1', ->
+    div '.span6', style: 'text-align: center', ->
       img src: course.imgSponsor
-      div ->
+      div style: 'margin-top: 20px;', ->
         button '.btn.btn-primary.btn-large', 'Sign Up'
         text '&nbsp;&nbsp;&nbsp;'
         button '.btn.btn-primary.btn-large', 'Questions'
@@ -108,7 +100,7 @@ div '.container', ->
         b 'Workload: '
         text '2.5 hours/week'
     div '.span7', ->
-      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-via="chscodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+      div '.span2', -> div '.pull-right', -> text '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/jquery-101.html" data-text="JQuery All the goodies!" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
       div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
 
