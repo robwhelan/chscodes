@@ -118,6 +118,10 @@ div '.container', ->
       p ->
         b 'Workload: '
         text '2.5 hours/week'
+      p ->
+        b 'Cost: '
+        text '$250'
+
     div '.span7', ->
       div '.span2', -> div '.pull-right', -> text """
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/#{course.name}.html" data-text="#{course.name}" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
