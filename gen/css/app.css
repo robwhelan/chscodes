@@ -1,6 +1,8 @@
 body {
   padding-top: 90px;
   
+  font-family: "Lato", "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
 }
 
 h1 {
@@ -35,6 +37,17 @@ li {
   color: rgba(0,0,0,.7);
 }
 
+.navbar .nav > li {
+  padding: 30px 5px 30px 5px;
+}
+.navbar .nav > li > a {
+  color: #535353;
+}
+
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #ffbb29, #e6dc42);
+  background-color: transparent;
+}
 /* Jumbotrons
 -------------------------------------------------- */
 .jumbotron {
@@ -64,20 +77,25 @@ li {
   font-size: 14px;
 }
 
+.jumbotron {
+}
+
 /* Masthead (docs home) */
 .masthead {
+  background: url('/images/codecamp_lab_closeup.jpg') no-repeat ;
+
   padding-top: 36px;
   margin-bottom: 72px;
 }
 .masthead h1,
 .masthead p {
-  text-align: center;
+  text-align: left;
 }
 .masthead h1 {
   margin-bottom: 18px;
 }
 .masthead p {
-  margin-left: 5%;
+  /* margin-left: 5%; */
   margin-right: 5%;
   font-size: 30px;
   line-height: 36px;
