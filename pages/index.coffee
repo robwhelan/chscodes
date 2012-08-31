@@ -1,10 +1,9 @@
 div '.container', ->
   header '.jumbotron.masthead', ->
-    div '.inner', ->
-      center -> img src: 'http://charlestoncodes.jpg.to'
-      h1 'CODE CAMP'
-      p 'Charleston, SC'
-      p 'An independent, augmentative education program conceived in collaboration with software technology companies in the Charleston Digital Corridor'
+    div '.inner', style: 'text-align: left;', ->
+      h1 'Emerging technologies'
+      h1 'taught here.'
+      p 'An independent learning platform from the Digital Corridor and its member companies.'
       div style: 'text-align: center;', ->
         a 'btn.btn-primary.btn-large', href: '/calendar.html', 'Calendar'
         a 'btn.btn-primary.btn-large', href: '/classes.html', 'Find Class'
@@ -52,10 +51,4 @@ div '.container', ->
           img '.bs-icon', src: 'http://placehold.it/30&text=logo'
           h2 style: 'display: inline;color: rgba(0,0,0,.8);font-size: 2.8em;', sponsor
           p 'by-line'
-  hr '.soften', ''
-  footer ->
-    ul '.nav', ->
-      li 'Copyright 2012'
-      li 'info@charlestoncodes.com'
-      li '843-724-3773'
-      li '78 ALEXANDER ST · CHARLESTON, SC · 29403'
+  
