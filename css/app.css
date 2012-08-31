@@ -64,6 +64,10 @@ li {
   font-size: 14px;
 }
 
+.jumbotron {
+  background: '/images/background.jpg';
+}
+
 /* Masthead (docs home) */
 .masthead {
   padding-top: 36px;
