@@ -12,6 +12,10 @@ div '.container', ->
     <phone><a href="tel://843-724-3773">843-724-3773</a></phone>
     '''
   div '.span6.offset1', 'ng-controller': 'ContactCtrl', ->
+    div '.alert.alert-success', 'ng-show': 'success', ->
+      button '.close', 'data-dismiss': 'alert', 'x'
+      strong 'Success! '
+      text 'Thank you for sending your message, we will contact you shortly!'
     form name: 'contactForm', ->
       div '.control-group', 'ng-class': "{error: contactForm.name.$invalid}", ->
         label 'Full Name'

@@ -6,10 +6,12 @@ $(function() {
 });
 
 function ContactCtrl($scope, $http) {
+  $scope.success = false;
+  
   $scope.send = function() {
     var job = { job: { klass: 'msg', args: [$scope.msg]}};
     $http.post('/contact',job).success(function(data){
-      console.log(data);
+      $scope.success = true;
       $scope.msg = {};
     });
   }
