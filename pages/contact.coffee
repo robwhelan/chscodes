@@ -11,12 +11,19 @@ div '.container', ->
     <address>78 Alexander Street<br />Charleston, SC 29464</address>
     <phone><a href="tel://843-724-3773">843-724-3773</a></phone>
     '''
-  div '.span4.offset1', ->
-    form ->
-      label 'Full Name'
-      input '.span4', type: 'text', autofocus: true
-      label 'Email'
-      input '.span4', type: 'email'
-      label 'Message'
-      textarea '.span4', rows: 5
-      button '.btn.btn-primary', 'Send'
+  div '.span6.offset1', 'ng-controller': 'ContactCtrl', ->
+    form name: 'contactForm', ->
+      div '.control-group', 'ng-class': "{error: contactForm.name.$invalid}", ->
+        label 'Full Name'
+        input '.span4', type: 'text', name: 'name', 'ng-model': 'msg.name', required: true, autofocus: true, placeholder: 'Your Name'
+        span '.help-inline', 'ng-show': 'contactForm.name.$error.required', 'Required'
+      div '.control-group', 'ng-class': "{error: contactForm.email.$invalid}", ->
+        label 'Email'
+        input '.span4', type: 'email', name: 'email', 'ng-model': 'msg.email', required: true, placeholder: 'you@email.com'
+        span '.help-inline', 'ng-show': 'contactForm.email.$error.required', 'Required'
+        span '.help-inline', 'ng-show': 'contactForm.email.$error.email', 'Not a Email'
+      div '.control-group', 'ng-class': '{error: contactForm.message.$invalid}', ->
+        label 'Message'
+        textarea '.span4', rows: 5, name: 'message', 'ng-model': 'msg.body', required: true
+        span '.help-inline', 'ng-show': 'contactForm.message.$error.required', 'Required'
+      button '.btn.btn-primary', 'ng-click': "send()", 'ng-disabled': 'contactForm.$invalid', 'Send'

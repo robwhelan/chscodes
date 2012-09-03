@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
     <meta charset="utf-8">
     <title>CharlestonCodes - Charleston, SC - Emerging Technology</title>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="container"><img id="background" src="/images/email-envelope.jpg" /><header class="jumbotron masthead"><div class="inner" style="text-align: left;"><h1>Contact</h1></div></header><i>We welcome any inquiries you may have.  Our physical address, phone number, and e-mail address are shown below, or you may fill out and submit the form to the right.</i><hr /><div class="span2 offset1"><h3><a href="http://flagship2.com">Flagship 2</a></h3><address>78 Alexander Street<br />Charleston, SC 29464</address>
-<phone><a href="tel://843-724-3773">843-724-3773</a></phone></div><div class="span4 offset1"><form><label>Full Name</label><input class="span4" type="text" autofocus="autofocus" /><label>Email</label><input class="span4" type="email" /><label>Message</label><textarea class="span4" rows="5"></textarea><button class="btn btn-primary">Send</button></form></div></div>
+<phone><a href="tel://843-724-3773">843-724-3773</a></phone></div><div class="span6 offset1" ng-controller="ContactCtrl"><form name="contactForm"><div class="control-group" ng-class="{error: contactForm.name.$invalid}"><label>Full Name</label><input class="span4" type="text" name="name" ng-model="msg.name" required="required" autofocus="autofocus" placeholder="Your Name" /><span class="help-inline" ng-show="contactForm.name.$error.required">Required</span></div><div class="control-group" ng-class="{error: contactForm.email.$invalid}"><label>Email</label><input class="span4" type="email" name="email" ng-model="msg.email" required="required" placeholder="you@email.com" /><span class="help-inline" ng-show="contactForm.email.$error.required">Required</span><span class="help-inline" ng-show="contactForm.email.$error.email">Not a Email</span></div><div class="control-group" ng-class="{error: contactForm.message.$invalid}"><label>Message</label><textarea class="span4" rows="5" name="message" ng-model="msg.body" required="required"></textarea><span class="help-inline" ng-show="contactForm.message.$error.required">Required</span></div><button class="btn btn-primary" ng-click="send()" ng-disabled="contactForm.$invalid">Send</button></form></div></div>
     
     <div class="navbar">
       <div class="navbar-inner" style="background-image: -webkit-linear-gradient(top,#dcdddf,#dcdddf);">
@@ -77,6 +77,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.scrollTo.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/app.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.1/angular.min.js"></script>
     <div id="contact" class="modal hide fade">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
