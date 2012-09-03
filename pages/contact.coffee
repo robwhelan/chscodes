@@ -12,6 +12,10 @@ div '.container', ->
     <phone><a href="tel://843-724-3773">843-724-3773</a></phone>
     '''
   div '.span6.offset1', 'ng-controller': 'ContactCtrl', ->
+    div '.alert.alert-error', 'ng-show': 'httpError', ->
+      button '.close', 'data-dismiss': 'alert', 'x'
+      strong 'Error! '
+      text 'An Error occured trying to send message, please contact administrator at admin@charlestoncodes.com'
     div '.alert.alert-success', 'ng-show': 'success', ->
       button '.close', 'data-dismiss': 'alert', 'x'
       strong 'Success! '
