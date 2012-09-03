@@ -9,7 +9,7 @@ course = {
   instructor: 'Matt Scott'
   instructorTitle: 'Applications Analyst'
   instructorCompany: 'MUSC: OBIS'
-  instructorPhoto: 'http://placehold.it/200&text=Photo'
+  instructorPhoto: '/images/matt.jpg'
   instructorBio: '''
   Matt Scott started programming in middle school working with HTML and CSS to make simple webpages.  He continued a hobby interest in programming, however ended up graduating with a degree in English/History.  After graduation he promptly decided to completely switch directions and taught himself Ruby and Ruby on Rails.
 
