@@ -8,7 +8,7 @@ div '.container', ->
   div '.span2.offset1', ->
     h3 -> a href: 'http://flagship2.com', 'Flagship 2'
     text '''
-    <address>78 Alexander Street<br />Charleston, SC 29464</address>
+    <address>78 Alexander Street<br />Charleston, SC 29403</address>
     <phone><a href="tel://843-724-3773">843-724-3773</a></phone>
     '''
   div '.span6.offset1', 'ng-controller': 'ContactCtrl', ->
