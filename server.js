@@ -7,7 +7,7 @@ server = http.createServer(function(req, resp){
   var pathname = url.parse(req.url).pathname;
   if (pathname === '/') pathname = '/index.html';
   if (pathname === '/contact' && req.method === 'POST') {
-    req.pipe(request.post(process.env.CLOUDQ)).pipe(resp);
+    req.pipe(request.post('http://codecamp:rocks@chscodesq.herokuapp.com/contact')).pipe(resp);
   } else {
     filed(__dirname + "/gen" + pathname).pipe(resp);
   }

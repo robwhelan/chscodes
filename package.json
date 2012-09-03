@@ -8,5 +8,6 @@
   "scripts": {
     "start": "server.js"
   },
-  "engines": "0.8"
+  "engines": "0.8",
+  "subdomain": "chscodes"
 }
