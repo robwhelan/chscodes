@@ -9,7 +9,10 @@ foo = [
 ]
 
 div '.container', ->
-  h1 'Classes'
+  img '#background', src: '/images/codecamp_lab_photo.jpg', style: 'height: 300px;'
+  header '.jumbotron.masthead', ->
+    div '.inner', style: 'text-align: left;', ->
+      h1 'Classes'
   # hr '.soften', ''
   # div '.row', ->
   #   div '.span3', ->

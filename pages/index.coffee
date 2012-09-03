@@ -1,13 +1,13 @@
 div '.container', ->
+  img '#background', src: '/images/background2.jpg'
   header '.jumbotron.masthead', ->
     div '.inner', style: 'text-align: left;', ->
       h1 'Emerging technologies'
       h1 'taught here.'
-      p 'An independent learning platform from the Digital Corridor and its member companies.'
+      p 'An independent learning platform from the Charleston Digital Corridor and its member companies.'
       div style: 'text-align: center;', ->
         a 'btn.btn-primary.btn-large', href: '/calendar.html', 'Calendar'
         a 'btn.btn-primary.btn-large', href: '/classes.html', 'Find Class'
-  hr '.soften', ''
   div '.marketing', ->
     h1 'Featured Courses'
     div '.row', ->
@@ -24,31 +24,3 @@ div '.container', ->
         center -> a href: '/classes/website-basics-101.html', -> img src: '/images/html-css-javascript.png', style: 'width:100px;'
         h2 style: 'display: inline;color: rgba(0,0,0,.8);font-size: 2.8em;',  -> a href: '/classes/website-basics-101.html', 'HTML Basics'
         p 'Learn the Basics of the web'
-  hr '.soften', ''
-  div '#sponsors.marketing', ->
-    h1 'Sponsors'
-    div '.row', ->
-      for sponsor in ['CSS', 'SINELABS', 'SPARC']
-        div '.span4', ->
-          #img '.bs-icon', src: 'http://placehold.it/30&text=logo'
-          h2 style: 'display: inline;color: rgba(0,0,0,.8);font-size: 2.8em;', sponsor
-          #p 'by-line'
-    div '.row', ->
-      for sponsor in ['BOOMTOWN', 'BLUE ACORN', 'BENEFIT FOCUS']
-        div '.span4', ->
-          #img '.bs-icon', src: 'http://placehold.it/30&text=logo'
-          h2 style: 'display: inline;color: rgba(0,0,0,.8);font-size: 2.8em;', sponsor
-          #p 'by-line'
-    div '.row', ->
-      for sponsor in ['PEOPLEMATTER', 'JACK RUSSELL SOFTWARE', 'KING & PARTNERS']
-        div '.span4', ->
-          #img '.bs-icon', src: 'http://placehold.it/30&text=logo'
-          h2 style: 'display: inline;color: rgba(0,0,0,.8);font-size: 2.8em;', sponsor
-          #p 'by-line'
-    div '.row', ->
-      for sponsor in ['&nbsp;','LIFE CYCLE ENGINEERING']
-        div '.span4', ->
-          #img '.bs-icon', src: 'http://placehold.it/30&text=logo'
-          h2 style: 'display: inline;color: rgba(0,0,0,.8);font-size: 2.8em;', sponsor
-          #p 'by-line'
-  

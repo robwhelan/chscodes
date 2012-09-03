@@ -2,7 +2,7 @@ course = {
   startDate: 'Sept 18, 2012'
   times: '6pm - 8:30pm'
   name: 'Website-Basics-101'
-  title: 'Website Basics: HTML and CSS'
+  title: 'Web Basics: HTML/CSS'
   section: '101'
   logo: '/images/html-css-javascript.png'
   imgSponsor: '/images/codecamp_logo.png'
@@ -77,16 +77,19 @@ div '.container', ->
         li -> a href: '#about', 'About The Course'
         li -> a href: '#instructor', 'About The Instructor'
         li -> a href: '#resources', 'Required Resources'
-        li -> a href: '#faq', 'Frequently Asked Questions'
+        li -> a href: '#faq', 'FAQ'
 
 div '.container', ->
   div '#top.row', ->
-    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
-      div '.well.span2', style: 'background: #fff;padding: 10px;margin-right:20px;', ->
-        img src: course.logo, alt: 'AWS EC2'
-      h1 course.title + ' - ' + course.section
-      p course.intro
-    
+    img '#background', src: '/images/codecamp_lab_photo.jpg', style: 'height: 300px;'
+    header '.jumbotron.masthead', ->
+      div '.inner', style: 'text-align: left;', ->
+        div '.span1', style: 'padding: 10px;margin-right:20px;', ->
+          img src: course.logo, alt: course.title
+        div '.span9', ->
+          h1 course.title # + ' - ' + course.section
+          p course.intro
+
     div '.span5', ->
       div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
       table '.table.table-bordered', ->

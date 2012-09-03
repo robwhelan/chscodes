@@ -1,8 +1,15 @@
 body {
-  padding-top: 170px;
+  padding-top: 120px;
   
   font-family: "Lato", "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
+}
+
+#background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 h1 {
@@ -44,11 +51,11 @@ li {
   color: #535353;
 }
 
-.btn-primary {
+/*.btn-primary {
   background-image: -webkit-linear-gradient(top, #ffbb29, #e6dc42);
   background-color: transparent;
 }
-/* Jumbotrons
+*//* Jumbotrons
 -------------------------------------------------- */
 .jumbotron {
   position: relative;
@@ -82,7 +89,7 @@ li {
 
 /* Masthead (docs home) */
 .masthead {
-  background: url('/images/codecamp_lab_closeup.jpg') no-repeat ;
+  /* background: url('/images/codecamp_lab_closeup.jpg') no-repeat ; */
 
   padding-top: 36px;
   margin-bottom: 72px;
@@ -212,7 +219,7 @@ li {
 @media (min-width: 980px) {
   .subnav-fixed {
     position: fixed;
-    top: 40px;
+    top: 120px;
     left: 0;
     right: 0;
     z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
@@ -245,5 +252,9 @@ li {
   /* Remove any padding from the body */
   body {
     padding-top: 0;
+  }
+  
+  #background {
+    display: none;
   }
 }

@@ -86,12 +86,14 @@ div '.container', ->
 
 div '.container', ->
   div '#top.row', ->
-    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
-      div '.span1', style: 'padding: 10px;margin-right:20px;', ->
-        img src: course.logo, alt: 'AWS EC2'
-      h1 course.title + ' - ' + course.section
-      p course.intro
-    
+    img '#background', src: '/images/codecamp_lab_photo.jpg', style: 'height: 300px;'
+    header '.jumbotron.masthead', ->
+      div '.inner', style: 'text-align: left;', ->
+        div '.span1', style: 'padding: 10px;margin-right:20px;', ->
+          img src: course.logo, alt: 'AWS EC2'
+        div '.span9', ->
+          h1 course.title # + ' - ' + course.section
+          p course.intro
     div '.span5', ->
       div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
       table '.table.table-bordered', ->

@@ -4,7 +4,7 @@ course = {
   name: 'PHP-101'
   title: 'PHP Hypertext Processor'
   section: '101'
-  logo: '/images/php-logo.jpeg'
+  logo: '/images/php-med-trans.png'
   imgSponsor: '/images/blueacorn.png'
   instructor: 'Brys Sepulveda'
   instructorTitle: 'Systems Architect'
@@ -76,12 +76,14 @@ div '.container', ->
 
 div '.container', ->
   div '#top.row', ->
-    div '.hero-unit', style: 'margin: 20px 0 20px 0;', ->
-      div '.well.span2', style: 'background: #fff;padding: 10px;margin-right:20px;', ->
-        img src: course.logo, alt: 'AWS EC2'
-      h1 course.title + ' - ' + course.section
-      p course.intro
-    
+    img '#background', src: '/images/codecamp_lab_photo.jpg', style: 'height: 450px;'
+    header '.jumbotron.masthead', ->
+      div '.inner', style: 'text-align: left;', ->
+        div '.span1', style: 'padding: 10px;margin-right:20px;', ->
+          img src: course.logo, alt: course.title
+        div '.span9', ->
+          h1 course.title # + ' - ' + course.section
+          p course.intro
     div '.span5', ->
       div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
       table '.table.table-bordered', ->
