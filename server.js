@@ -1,11 +1,16 @@
 var http = require('http'),
   filed = require('filed'),
-  url = require('url');
+  url = require('url'),
+  request = require('request');
 
 server = http.createServer(function(req, resp){
   var pathname = url.parse(req.url).pathname;
   if (pathname === '/') pathname = '/index.html';
-  filed("" + __dirname + "/gen" + pathname).pipe(resp);
+  if (pathname === '/contact' && req.method === 'POST') {
+    req.pipe(request.post(process.env.CLOUDQ)).pipe(resp);
+  } else {
+    filed(__dirname + "/gen" + pathname).pipe(resp);
+  }
 });
 
 server.listen(3000, function() {
