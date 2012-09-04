@@ -1,9 +1,8 @@
 div '.container', ->
-  img '#background', src: '/images/78alexmap.jpg'
   header '.jumbotron.masthead', ->
+    img '#background', src: '/images/78alexmap.jpg', style: 'max-height: 130%;'
     div '.inner', style: 'text-align: left;', ->
       h1 'Where is CODECamp?'
-  hr()
   text '''
   <p>CODEcamp sessions are held at the <a href="http://flagship2.com">Flagship 2</a> facility in downtown Charleston, SC</p>
   '''

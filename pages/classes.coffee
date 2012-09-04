@@ -9,24 +9,11 @@ foo = [
 ]
 
 div '.container', ->
-  img '#background', src: '/images/codecamp_lab_photo.jpg', style: 'height: 300px;'
   header '.jumbotron.masthead', ->
+    img '#background', src: '/images/codecamp_lab_photo.jpg', style: 'max-height: 100%;'
     div '.inner', style: 'text-align: left;', ->
       h1 'Classes'
-  # hr '.soften', ''
-  # div '.row', ->
-  #   div '.span3', ->
-  #     b 'Filter&nbsp;&nbsp;'
-  #     select ->
-  #       option 'All Categories'
-  #   div '.span4', ->
-  #     b 'Sort By&nbsp;&nbsp;'
-  #     select ->
-  #       option 'Start Date'
-  #   div '.span4', ->
-  #     b 'Search&nbsp;&nbsp;'
-  #     input type: 'search'
-  hr '.soften', ''
+    hr '.soften', ''
   div '.row', ->
     ul style: 'list-style: none;', ->
       for klass in foo

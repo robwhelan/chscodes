@@ -64,11 +64,11 @@ faqs.push
   answer: 'The parking lot at 78 Alexander is open to course participants after 5:30pm.'
 
 div '.container', ->
-  img '#background', src: '/images/questions-and-answers.jpg'
   header '.jumbotron.masthead', ->
+    img '#background', src: '/images/questions-and-answers.jpg', style: 'max-height: 100%;'
     div '.inner', style: 'text-align: left;', ->
       h1 'FAQs'
-  hr()
+    hr()
   div 'span7.offset2', ->
     for faq in faqs
       div '.faq', ->

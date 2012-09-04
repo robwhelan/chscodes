@@ -1,10 +1,10 @@
 div '.container', ->
-  img '#background', src: '/images/email-envelope.jpg'
   header '.jumbotron.masthead', ->
+    img '#background', src: '/images/email-envelope.jpg', style: 'max-height: 100%;'
     div '.inner', style: 'text-align: left;', ->
       h1 'Contact'
-  i 'We welcome any inquiries you may have.  Our physical address, phone number, and e-mail address are shown below, or you may fill out and submit the form to the right.'
-  hr '.soften'
+    i 'We welcome any inquiries you may have.  Our physical address, phone number, and e-mail address are shown below, or you may fill out and submit the form to the right.'
+    hr '.soften', ''
   div '.span2.offset1', ->
     h3 -> a href: 'http://flagship2.com', 'Flagship 2'
     text '''
@@ -23,7 +23,7 @@ div '.container', ->
     form name: 'contactForm', ->
       div '.control-group', 'ng-class': "{error: contactForm.name.$invalid}", ->
         label 'Full Name'
-        input '.span4', type: 'text', name: 'name', 'ng-model': 'msg.name', required: true, autofocus: true, placeholder: 'Your Name'
+        input '.span4', type: 'text', name: 'name', 'ng-model': 'msg.name', required: true, placeholder: 'Your Name'
         span '.help-inline', 'ng-show': 'contactForm.name.$error.required', 'Required'
       div '.control-group', 'ng-class': "{error: contactForm.email.$invalid}", ->
         label 'Email'
