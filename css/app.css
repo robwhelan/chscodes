@@ -3,13 +3,16 @@ body {
   
   font-family: "Lato", "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
+  
 }
 
 #background {
-  width: 100%;
+  width: 120%;
   position: absolute;
   top: 0;
   left: 0;
+  height: ;
+  z-index: -1000;
 }
 
 h1 {
@@ -217,6 +220,7 @@ li {
 
 /* Fixed subnav on scroll, but only for 980px and up (sorry IE!) */
 @media (min-width: 980px) {
+  
   .subnav-fixed {
     position: fixed;
     top: 120px;

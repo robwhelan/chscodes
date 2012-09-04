@@ -1,6 +1,6 @@
 {
   "name": "chscodes",
-  "version": "0.0.3-1",
+  "version": "0.0.4",
   "dependencies": {
     "filed": "*",
     "request": "*"
@@ -11,5 +11,9 @@
   "engines": {
     "node": "~0.8.x"
   },
-  "subdomain": "chscodes"
+  "subdomain": "chscodes",
+  "domains": [
+    "charlestoncodes.com",
+    "www.charlestoncodes.com"
+  ]
 }

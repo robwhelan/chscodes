@@ -1,6 +1,6 @@
 div '.container', ->
-  img '#background', src: '/images/background2.jpg'
   header '.jumbotron.masthead', ->
+    img '#background', src: '/images/background2.jpg'
     div '.inner', style: 'text-align: left;', ->
       h1 'Emerging technologies'
       h1 'taught here.'
