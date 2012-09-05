@@ -34,4 +34,4 @@ div '.container', ->
         label 'Message'
         textarea '.span4', rows: 5, name: 'message', 'ng-model': 'msg.body', required: true
         span '.help-inline', 'ng-show': 'contactForm.message.$error.required', 'Required'
-      button '.btn.btn-primary', 'ng-click': "send()", 'ng-disabled': 'contactForm.$invalid', 'Send'
+      button '.btn.btn-primary.btn-large', 'ng-click': "send()", 'ng-disabled': 'contactForm.$invalid', 'Send'

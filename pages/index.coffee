@@ -1,5 +1,5 @@
 div '.container', ->
-  header '.jumbotron.masthead', ->
+  header '.jumbotron.masthead',  style: 'padding-bottom: 40px;', ->
     img '#background', src: '/images/background2.jpg'
     div '.inner', style: 'text-align: left;', ->
       h1 'Emerging technologies'

@@ -9,9 +9,9 @@ body {
 #background {
   width: 120%;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
-  height: ;
+  height: 100%;
   z-index: -1000;
 }
 
@@ -52,13 +52,27 @@ li {
 }
 .navbar .nav > li > a {
   color: #535353;
+  font-family: "Lato", "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
 }
 
-/*.btn-primary {
+.navbar {
+  border-bottom: 1px solid #bbb;
+}
+
+#footer .navbar-inner {
+  background: #404040;
+}
+
+#footer .nav li a {
+  color: #AAA;
+}
+
+.btn-primary {
   background-image: -webkit-linear-gradient(top, #ffbb29, #e6dc42);
   background-color: transparent;
 }
-*//* Jumbotrons
+/* Jumbotrons
 -------------------------------------------------- */
 .jumbotron {
   position: relative;
@@ -69,6 +83,10 @@ li {
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
+  color: #262626;
+  font-family: "Lato", "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 900;
+  
 }
 .jumbotron p {
   margin-bottom: 18px;
@@ -258,7 +276,8 @@ li {
     padding-top: 0;
   }
   
-  #background {
+/*  #background {
     display: none;
   }
+*/
 }
