@@ -58,8 +58,9 @@ course = {
         How to program in at least one programming language (like C, Java, Ruby, or Python); experience
         with HTTP is a real plus.
         '''
-  }]
-} 
+  }],
+  eventbrite: '4253291710'
+}
 
 text '''
 <div id="fb-root"></div>
@@ -80,11 +81,11 @@ div '.container', ->
         li -> a href: '#about', 'About The Course'
         li -> a href: '#instructor', 'About The Instructor'
         li -> a href: '#resources', 'Required Resources'
-        li -> a href: '#faq', 'Frequently Asked Questions'
+        li -> a href: '#faq', 'FAQ'
 
 div '.container', ->
   div '#top.row', ->
-    img '#background', src: '/images/codecamp_lab_photo.jpg', style: 'height: 360px;'
+    img '#background', src: '/images/codecamp_lab_photo.jpg', style: 'left: 200px; top:160px;max-height: 85%;' #style: 'height: 300px;'
     header '.jumbotron.masthead', ->
       div '.inner', style: 'text-align: left;', ->
         div '.span1', style: 'padding: 10px;margin-right:20px;', ->
@@ -94,25 +95,18 @@ div '.container', ->
           p course.intro
 
     div '.span5', ->
-      div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
-      table '.table.table-bordered', ->
-        tr ->
-          th 'Instructor'
-          td course.instructor
-        tr ->
-          th 'Title'
-          td course.instructorTitle
-        tr ->
-          th 'Company'
-          td course.instructorCompany
+      div style: 'text-align: center;padding: 10px;', -> 
+        img '.instructor-img', src: course.instructorPhoto
+        h1 course.instructor
+        a '#aboutbtn.btn.btn-primary', href: '#instructor', 'About the Instructor' 
     div '.span6', style: 'text-align: center', ->
       img src: course.imgSponsor
       div style: 'margin-top: 20px;', ->
-        text '''
-        <div style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.com/tickets-external?eid=4253291710&ref=etckt" frameborder="0" height="192" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Online Ticketing</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://http://charlestoncodes-nodejs101.eventbrite.com?ref=etckt">Introduction to NodeJS</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com?ref=etckt">Eventbrite</a></div></div>
-        '''
-  hr()
-  div '.row', ->
+        text """
+        <div style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.com/tickets-external?eid=#{course.eventbrite}&ref=etckt" frameborder="0" height="192" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Online Ticketing</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://http://www.eventbrite.com/event/4253327818?ref=etckt">Web Basics</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com?ref=etckt">Eventbrite</a></div></div>
+        """
+
+  div '.row', style: 'background: white;border-top: 1px solid #FFF;padding-top: 20px;', ->
     div '.span4', ->
       p ->
         b 'Starts On: '
@@ -146,9 +140,9 @@ div '.container', ->
       div '.span2', -> text '''
       <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
       '''
-  hr()
-  div '.row', ->
-    div '#about.span5', ->
+  #hr()
+  div '#about.row',  ->
+    div '.span5', ->
       h2 style: 'margin-bottom: 40px;', 'About the Course'
       markdown course.description
     div '.span6', ->
@@ -160,8 +154,8 @@ div '.container', ->
           tr -> 
             td session
   hr()
-  div '.row', ->
-    h2 '#instructor', style: 'margin-bottom: 40px;', 'About the Instructor'
+  div '#instructor.row', ->
+    h2 style: 'margin-bottom: 40px;', 'About the Instructor'
     div '.span4', ->
       div style: 'text-align: center;padding: 10px;', -> img src: course.instructorPhoto
       table '.table.table-bordered', ->
@@ -176,8 +170,7 @@ div '.container', ->
           td course.instructorCompany
 
     div '.span6', -> markdown course.instructorBio
-  hr '#resources', ''
-  div '.row', ->
+  div '#resources.row', ->
     div '.span6', -> 
       h2 style: 'margin-bottom: 40px;', 'Required Resources'
       markdown course.resourceDescription
@@ -189,8 +182,8 @@ div '.container', ->
           tr -> 
             td skill
   hr()
-  div '.row', ->
-    div '#faq', -> h2 'Frequently Asked Questions'
+  div '#faq.row', ->
+    div -> h2 'Frequently Asked Questions'
     div '.span6.offset2', style: 'margin-top: 50px;', ->
       ul ->
         for faq in course.faqs
@@ -199,3 +192,4 @@ div '.container', ->
             br()
             p faq.answer
             br()
+  

@@ -3,6 +3,11 @@ $(function() {
     e.preventDefault();
     $.scrollTo($(this).attr('href'), 1200, { offset: { top: -155, left: 0}});
   });
+
+  $('a#aboutbtn').click(function(e) {
+    e.preventDefault();
+    $.scrollTo($(this).attr('href'), 1200, { offset: { top: -155, left: 0}});
+  });
   
   $(".jumbotron .inner h1").fitText(1.2, { maxFontSize: '80px'});
   

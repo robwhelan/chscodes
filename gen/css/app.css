@@ -72,6 +72,11 @@ li {
   background-image: -webkit-linear-gradient(top, #ffbb29, #e6dc42);
   background-color: transparent;
 }
+
+.instructor-img {
+  padding: 5px;
+  background: rgba(255,255,255, .5);
+}
 /* Jumbotrons
 -------------------------------------------------- */
 .jumbotron {
@@ -280,4 +285,7 @@ li {
     display: none;
   }
 */
+  #footer .nav li a {
+    font-size: .6em;
+  }
 }
