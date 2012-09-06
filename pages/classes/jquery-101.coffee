@@ -5,7 +5,7 @@ course = {
   title: 'jQuery: All the goodies!'
   section: '101'
   logo: '/images/jquery_logo.png'
-  imgSponsor: '/images/codecamp_logo.png'
+  imgSponsor: '/images/jackhq-logo.png'
   instructor: 'Nick Bucciarelli'
   instructorTitle: 'Programmer/Analyst'
   instructorCompany: 'Jack Russell Software'

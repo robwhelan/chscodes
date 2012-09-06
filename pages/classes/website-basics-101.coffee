@@ -5,7 +5,7 @@ course = {
   title: 'Web Basics: HTML/CSS'
   section: '101'
   logo: '/images/html-css-javascript.png'
-  imgSponsor: '/images/codecamp_logo.png'
+  imgSponsor: '/images/sinelabs_official_logo.png'
   instructor: 'Joe Bryan, President/Founder at sineLABS'
   instructorTitle: 'President/Founder'
   instructorCompany: 'sineLABS'

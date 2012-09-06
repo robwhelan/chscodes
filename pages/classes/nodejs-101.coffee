@@ -5,7 +5,7 @@ course = {
   title: 'Intro to NodeJs'
   section: '101'
   logo: '/images/nodejs-dark.png'
-  imgSponsor: '/images/codecamp_logo.png'
+  imgSponsor: '/images/jackhq-logo.png'
   instructor: 'Tom Wilson'
   instructorTitle: 'Chief Technologist'
   instructorCompany: 'Jack Russell Software'

@@ -5,7 +5,7 @@ course = {
   title: 'Elastic Compute Cloud'
   section: '101'
   logo: '/images/aws.png'
-  imgSponsor: '/images/codecamp_logo.png'
+  imgSponsor: '/images/jackhq-logo.png'
   instructor: 'P. Barrett Little'
   instructorTitle: 'Senior Programmer/Analyst'
   instructorCompany: 'Jack Russell Software'
