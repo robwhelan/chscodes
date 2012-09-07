@@ -1,5 +1,5 @@
 course = {
-  startdate: 'Wed, Sept 19, 2012'
+  startDate: 'Wed, Sept 19, 2012'
   times: '3pm - 5:30pm'
   name: 'NodeJs-101'
   title: 'Intro to NodeJs'
@@ -91,7 +91,7 @@ div '.container', ->
         div '.span1', style: 'padding: 10px;margin-right:20px;', ->
           img src: course.logo, alt: course.title
         div '.span9', ->
-          h1 course.title # + ' - ' + course.section
+          h1 course.title 
           p course.intro
 
     div '.span5', ->
@@ -124,27 +124,10 @@ div '.container', ->
       p ->
         b 'Cost: '
         text '$250'
-
     div '.span3', ->
       div '.span2', -> div '.pull-right', -> text """
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/#{course.name}.html" data-text="#{course.name}" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       """
-      # div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
-      #   <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-      # 
-      #   <!-- Place this tag after the last +1 button tag. -->
-      #   <script type="text/javascript">
-      #     (function() {
-      #       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      #       po.src = 'https://apis.google.com/js/plusone.js';
-      #       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      #     })();
-      #   </script>
-      # '''
-      # div '.span2', -> text '''
-      # <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
-      # '''
-  #hr()
   div '#about.row',  ->
     div '.span5', ->
       h2 style: 'margin-bottom: 40px;', 'About the Course'
@@ -155,8 +138,7 @@ div '.container', ->
         tr -> 
           th 'Sessions' 
         for session in course.sessions
-          tr -> 
-            td session
+          tr -> td session
   hr()
   div '#instructor.row', ->
     h2 style: 'margin-bottom: 40px;', 'About the Instructor'
@@ -172,19 +154,18 @@ div '.container', ->
         tr ->
           th 'Company'
           td course.instructorCompany
-
+  
     div '.span6', -> markdown course.instructorBio
   div '#resources.row', ->
     div '.span6', -> 
       h2 style: 'margin-bottom: 40px;', 'Required Resources'
       markdown course.resourceDescription
-
+  
     div '.span6', ->
       h3 style: 'margin-bottom: 50px', 'Skillsets'
       table '.table.table-bordered', ->
         for skill in course.skillsets
-          tr -> 
-            td skill
+          tr -> td skill
   hr()
   div '#faq.row', ->
     div -> h2 'Frequently Asked Questions'
@@ -196,4 +177,3 @@ div '.container', ->
             br()
             p faq.answer
             br()
-  

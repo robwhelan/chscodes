@@ -119,22 +119,6 @@ div '.container', ->
       div '.span2', -> div '.pull-right', -> text """
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charlestoncodes.com/classes/#{course.name}.html" data-text="#{course.name}" data-via="ChsCodes" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       """
-      # div '.span2', -> text '''  <!-- Place this tag where you want the +1 button to render. -->
-      #   <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-      # 
-      #   <!-- Place this tag after the last +1 button tag. -->
-      #   <script type="text/javascript">
-      #     (function() {
-      #       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      #       po.src = 'https://apis.google.com/js/plusone.js';
-      #       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      #     })();
-      #   </script>
-      # '''
-      # div '.span2', -> text '''
-      # <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
-      # '''
-  #hr()
   div '#about.row',  ->
     div '.span5', ->
       h2 style: 'margin-bottom: 40px;', 'About the Course'
