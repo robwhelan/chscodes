@@ -1,6 +1,6 @@
 {
   "name": "chscodes",
-  "version": "0.0.6-2",
+  "version": "0.0.6-13",
   "dependencies": {
     "filed": "*",
     "request": "*"
