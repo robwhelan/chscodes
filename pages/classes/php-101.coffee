@@ -1,5 +1,5 @@
 course = {
-  startDate: 'Mon, Sept 17, 2012'
+  startDate: 'Mon, Oct 15, 2012'
   times: '6pm - 8:30pm'
   name: 'PHP-101'
   title: 'PHP Hypertext Processor'

@@ -1,5 +1,5 @@
 course = {
-  startDate: 'Wed, Sept 19, 2012'
+  startDate: 'Wed, Oct 17, 2012'
   times: '6pm - 8:30pm'
   name: 'Rails-101'
   title: 'Intro to Ruby on Rails'

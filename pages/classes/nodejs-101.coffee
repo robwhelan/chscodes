@@ -1,5 +1,5 @@
 course = {
-  startDate: 'Wed, Sept 19, 2012'
+  startDate: 'Wed, Oct 17, 2012'
   times: '3pm - 5:30pm'
   name: 'NodeJs-101'
   title: 'Intro to NodeJs'

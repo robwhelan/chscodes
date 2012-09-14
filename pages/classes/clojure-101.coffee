@@ -1,5 +1,5 @@
 course = {
-  startDate: 'Thur, Sept 20, 2012'
+  startDate: 'Thur, Oct 18, 2012'
   times: '3pm - 5:30pm'
   name: 'Clojure-101'
   title: 'Introduction to Clojure'

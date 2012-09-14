@@ -1,5 +1,5 @@
 course = {
-  startDate: 'Mon, Sept 24, 2012'
+  startDate: 'Mon, Oct 15, 2012'
   times: '3pm - 5:30pm'
   name: 'EC2-101'
   title: 'Elastic Compute Cloud'

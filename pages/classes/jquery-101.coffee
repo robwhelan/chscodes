@@ -1,5 +1,5 @@
 course = {
-  startDate: 'Thur, Sept 20, 2012'
+  startDate: 'Thur, Oct 18, 2012'
   times: '6pm - 8:30pm'
   name: 'jQuery-101'
   title: 'jQuery: All the goodies!'
