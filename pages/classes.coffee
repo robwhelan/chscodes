@@ -1,11 +1,11 @@
 foo = [
-  { name: 'Getting Started with RubyonRails', link: '/classes/rails-101.html', img: '/images/rails_logo.png', startDate: '9/19/2012', times: '6pm - 8:30pm'}
-  { name: 'JQuery: All the Goodies', link: '/classes/jquery-101.html', img: '/images/jquery_logo.png', startDate: '9/20/2012', times: '6pm - 8:30pm'}
-  { name: 'Website Basics', link: '/classes/website-basics-101.html', img: '/images/html-css-javascript.png', startDate: '9/18/2012', times: '6pm - 8:30pm'}
-  { name: 'Cloud Server Management', link: '/classes/ec2-101.html', img: '/images/aws.png', startDate: '9/24/2012', times: '3pm - 5:30pm'}
-  { name: 'Getting started with PHP', link: '/classes/php-101.html', img: '/images/php-logo.jpeg', startDate: '9/17/2012',times: '6pm - 8:30pm'}
-  { name: 'Intro to NodeJS', link: '/classes/nodejs-101.html', img: '/images/nodejs-dark.png', startDate: '9/19/2012',times: '3pm - 6:30pm'}
-  { name: 'Getting started with Clojure', link: '/classes/clojure-101.html', img: '/images/clojure-icon.gif', startDate: '9/20/2012',times: '3pm - 5:30pm'}
+  { name: 'Getting Started with RubyonRails', link: '/classes/rails-101.html', img: '/images/rails_logo.png', startDate: '10/17/2012', times: '6pm - 8:30pm'}
+  { name: 'JQuery: All the Goodies', link: '/classes/jquery-101.html', img: '/images/jquery_logo.png', startDate: '10/18/2012', times: '6pm - 8:30pm'}
+  { name: 'Website Basics', link: '/classes/website-basics-101.html', img: '/images/html-css-javascript.png', startDate: '10/16/2012', times: '6pm - 8:30pm'}
+  { name: 'Cloud Server Management', link: '/classes/ec2-101.html', img: '/images/aws.png', startDate: '10/15/2012', times: '3pm - 5:30pm'}
+  { name: 'Getting started with PHP', link: '/classes/php-101.html', img: '/images/php-logo.jpeg', startDate: '10/15/2012',times: '6pm - 8:30pm'}
+  { name: 'Intro to NodeJS', link: '/classes/nodejs-101.html', img: '/images/nodejs-dark.png', startDate: '10/17/2012',times: '3pm - 6:30pm'}
+  { name: 'Getting started with Clojure', link: '/classes/clojure-101.html', img: '/images/clojure-icon.gif', startDate: '10/18/2012',times: '3pm - 5:30pm'}
 ]
 
 div '.container', ->
